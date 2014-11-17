@@ -4,7 +4,7 @@ Router.map( function () {
   });
 });
 Router.map( function () {
-  this.route('create');
+  this.route('event');
 });
 Router.map( function () {
   this.route('signup');
