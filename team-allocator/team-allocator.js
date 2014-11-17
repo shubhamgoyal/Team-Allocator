@@ -1,4 +1,9 @@
 Router.map( function () {
+  this.route('eventListing', {
+    path: '/'
+  });
+});
+Router.map( function () {
   this.route('create');
 });
 Router.map( function () {
@@ -17,6 +22,12 @@ Events = new Mongo.Collection("events");
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
+
+  Template.eventListing.helpers({
+	  events: function () {
+		  return Events.find({});
+	  }
+  });
 
   Template.body.helpers({
     events: function() {
@@ -50,8 +61,9 @@ if (Meteor.isClient) {
 		  return false;
 	  }
   });
-
+  
   /*Template.hello.events({
+  Template.hello.events({
     'click button': function () {
       // increment the counter when button is clicked
       Session.set("counter", Session.get("counter") + 1);
