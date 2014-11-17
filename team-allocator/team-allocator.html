@@ -3,12 +3,21 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Team Allocator App</h1>
 
   {{> hello}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+  <button>Sign up</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="form">
+  <form action="process_form.php" class="TTWForm" method="post" novalidate="">
+    <div id="field1-container" class="field f_100">
+    <label for="field1">Enter event name</label>
+    <input type="text" name="event-name" id="field1" required="required">
+    </div>
+  </form>
 </template>
