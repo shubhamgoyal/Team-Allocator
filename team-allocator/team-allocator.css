@@ -1,15 +1,77 @@
 @import url(http://fonts.googleapis.com/css?family=Alegreya:700|Roboto);
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+h1, h2, h3, h4, h5, h6, ul, li, p {
+  margin: 0;
+  padding: 0; }
+
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: 0;
+  border: 0; }
+  input:hover, input:active, input:focus,
+  textarea:hover,
+  textarea:active,
+  textarea:focus,
+  button:hover,
+  button:active,
+  button:focus {
+    outline: 0;
+    border: 0; }
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%; }
+
+img {
+  height: auto;
+  width: auto;
+  /* IE8 */ }
+
 body {
   font-family: "Roboto", sans-serif; }
 
+.wrapper {
+  max-width: 300px; }
+
 h1 {
-  font-family: "Alegreya", serif; }
+  font-family: "Alegreya", serif;
+  margin-bottom: 1em; }
 
 label {
   display: block; }
 
 form {
-  margin-bottom: 1em; }
+  margin: 1em 0;
+  clear: both; }
+
+input[type=text] {
+  border: 2px solid gray;
+  padding: 1em;
+  margin: 1em 0;
+  width: 100%; }
 
 input[type=submit] {
-  padding: 1em; }
+  padding: 0.75em;
+  cursor: pointer;
+  border: 2px solid #6195ED;
+  background: white;
+  color: #6195ED;
+  font-size: 12px;
+  float: right; }
+
+input[type=submit]:hover {
+  background: #6195ED;
+  color: white; }

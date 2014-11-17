@@ -5,9 +5,13 @@
 <body>
   <h1>Team Allocator App</h1>
 
+  <div class="wrapper">
   {{> event}}
+  </div>
 
+  <div class="wrapper">
   {{> user}}
+  </div>
 
   <ul>
     {{#each events}}
@@ -60,7 +64,7 @@
     <input type="text" name="user-name" id="user" required="required">
     </div>
     <div id="form-submit" class="field f_100 clearfix submit">
-      <input type="submit" value="Create">
+      <input type="submit" value="Sign up">
     </div>
   </form>
 </template>
