@@ -43,7 +43,7 @@ if (Meteor.isClient) {
   Template.event.events({
 	  'click #create-event': function (event) {
 		  Events.insert({
-			  'name': $('#event-name').val()
+			  'name': $('#event-name').val(),
 			  'attendees': []
 		  });
 
