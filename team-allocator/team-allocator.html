@@ -14,6 +14,31 @@
       {{> eventListing}}
     {{/each}}
   </ul>
+
+  <div class="dashboard">
+      <h3>Dashboard for Event {{text}}</h3>
+      <table>
+          <thead>
+            <tr>
+                <th>Group 1</th>
+                <th>Group 2</th>
+                <th>Group 3</th>
+                <th>Group 4</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>
+                  <ul>
+                      {{#each attendee}}
+                        {{> attendee}}
+                      {{/each}}
+                  </ul>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
 </body>
 
 <template name="event">
@@ -44,6 +69,10 @@
   <li>
     {{text}}
   </li>
+</template>
+
+<template name="dashboard">
+    <li>{{attendee}}</li>
 </template>
 
 <template name="something"></template>
