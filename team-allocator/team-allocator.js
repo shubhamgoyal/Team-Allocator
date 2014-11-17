@@ -1,3 +1,17 @@
+Router.map( function () {
+  this.route('create');
+});
+Router.map( function () {
+  this.route('signup');
+});
+Router.map( function () {
+  this.route('events');
+});
+Router.map( function () {
+  this.route('dashboard');
+});
+
+
 Events = new Mongo.Collection("events");
 
 if (Meteor.isClient) {
