@@ -70,9 +70,13 @@
 </template>
 
 <template name="eventListing">
+  <ul>
+	  {{#each events}}
   <li>
-    {{text}}
+    {{this.name}}
   </li>
+  {{/each}}
+  </ul>
 </template>
 
 <template name="dashboard">
