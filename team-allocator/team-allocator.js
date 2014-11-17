@@ -44,6 +44,7 @@ if (Meteor.isClient) {
 	  'click #create-event': function (event) {
 		  Events.insert({
 			  'name': $('#event-name').val()
+			  'attendees': []
 		  });
 
 		  return false;
