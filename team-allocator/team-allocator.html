@@ -8,6 +8,12 @@
   {{> event}}
 
   {{> user}}
+
+  <ul>
+    {{#each events}}
+      {{> eventListing}}
+    {{/each}}
+  </ul>
 </body>
 
 <template name="hello">
@@ -37,4 +43,10 @@
       <input type="submit" value="Create">
     </div>
   </form>
+</template>
+
+<template name="eventListing">
+    <li>
+        {{text}}
+    </li>
 </template>
