@@ -30,7 +30,7 @@ if (Meteor.isClient) {
        }
   });
 
-  Template.hello.helpers({
+  /*Template.hello.helpers({
     counter: function () {
       return Session.get("counter");
     },
@@ -38,7 +38,7 @@ if (Meteor.isClient) {
 	  events: function () {
 		  return Events.find({});
 	  }
-  });
+  });*/
 
   Template.event.events({
 	  'click #create-event': function (event) {
@@ -51,12 +51,12 @@ if (Meteor.isClient) {
 	  }
   });
 
-  Template.hello.events({
+  /*Template.hello.events({
     'click button': function () {
       // increment the counter when button is clicked
       Session.set("counter", Session.get("counter") + 1);
     }
-  });
+  });*/
 
   Template.eventListing.events({
     'click li': function(e, t) {
