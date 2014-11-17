@@ -7,7 +7,7 @@ Router.map( function () {
   this.route('event');
 });
 Router.map( function () {
-  this.route('signup');
+  this.route('user');
 });
 Router.map( function () {
   this.route('events');
