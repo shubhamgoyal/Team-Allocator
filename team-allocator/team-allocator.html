@@ -16,19 +16,14 @@
   </ul>
 </body>
 
-<template name="hello">
-  <button>Sign up</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
 <template name="event">
-  <form action="process_form.php" class="TTWForm" method="post" novalidate="">
+  <form action="" class="TTWForm" method="post" novalidate="">
     <div id="event" class="create">
     <label for="event">Enter event name</label>
-    <input type="text" name="event-name" id="user" required="required">
+    <input type="text" name="event-name" id="event-name" required="required">
     </div>
     <div id="form-submit" class="field f_100 clearfix submit">
-      <input type="submit" value="Create">
+     <input type="submit" value="Create" id="create-event">
     </div>
   </form>
 </template>
@@ -46,7 +41,9 @@
 </template>
 
 <template name="eventListing">
-    <li>
-        {{text}}
-    </li>
+  <li>
+    {{text}}
+  </li>
 </template>
+
+<template name="something"></template>
