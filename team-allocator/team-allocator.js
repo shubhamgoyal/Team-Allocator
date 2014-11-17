@@ -1,8 +1,14 @@
-Events = new Mongo.Collection('events');
+Events = new Mongo.Collection("events");
 
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
+
+  Template.body.helpers({
+    events: function() {
+      return Events.find({});
+    }
+  });
 
   Template.hello.helpers({
     counter: function () {
