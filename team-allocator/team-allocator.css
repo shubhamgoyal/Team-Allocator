@@ -1,1 +1,15 @@
-/* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Alegreya:700|Roboto);
+body {
+  font-family: "Roboto", sans-serif; }
+
+h1 {
+  font-family: "Alegreya", serif; }
+
+label {
+  display: block; }
+
+form {
+  margin-bottom: 1em; }
+
+input[type=submit] {
+  padding: 1em; }

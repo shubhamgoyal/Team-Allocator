@@ -5,8 +5,6 @@
 <body>
   <h1>Team Allocator App</h1>
 
-  {{> hello}}
-
   {{> event}}
 
   {{> user}}
@@ -17,12 +15,6 @@
     {{/each}}
   </ul>
 </body>
-
-<template name="hello">
-  <button>Sign up</button>
-  <p>You've pressed the button {{counter}} times.</p>
-  <div>Events: {{#each events}} {{this.name}} {{/each}}</div>
-</template>
 
 <template name="event">
   <form action="" class="TTWForm" method="post" novalidate="">
@@ -49,9 +41,9 @@
 </template>
 
 <template name="eventListing">
-    <li>
-        {{text}}
-    </li>
+  <li>
+    {{text}}
+  </li>
 </template>
 
 <template name="something"></template>
