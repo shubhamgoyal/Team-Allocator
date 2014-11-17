@@ -10,6 +10,12 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.something.helpers({
+       events: function() {
+	       return Events.find({});
+       }
+  })
+
   Template.hello.helpers({
     counter: function () {
       return Session.get("counter");
