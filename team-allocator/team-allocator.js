@@ -58,7 +58,6 @@ if (Meteor.isClient) {
 			  'attendees': []
 		  });
 
-		  return false;
 	  }
   });
   
