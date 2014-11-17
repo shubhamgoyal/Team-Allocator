@@ -5,15 +5,44 @@
 <body>
   <h1>Team Allocator App</h1>
 
+  <div class="wrapper">
   {{> event}}
+  </div>
 
+  <div class="wrapper">
   {{> user}}
+  </div>
 
   <ul>
     {{#each events}}
       {{> eventListing}}
     {{/each}}
   </ul>
+
+  <div class="dashboard">
+      <h3>Dashboard for Event {{text}}</h3>
+      <table>
+          <thead>
+            <tr>
+                <th>Group 1</th>
+                <th>Group 2</th>
+                <th>Group 3</th>
+                <th>Group 4</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>
+                  <ul>
+                      {{#each attendee}}
+                        {{> attendee}}
+                      {{/each}}
+                  </ul>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
 </body>
 
 <template name="event">
@@ -35,15 +64,23 @@
     <input type="text" name="user-name" id="user" required="required">
     </div>
     <div id="form-submit" class="field f_100 clearfix submit">
-      <input type="submit" value="Create">
+      <input type="submit" value="Sign up">
     </div>
   </form>
 </template>
 
 <template name="eventListing">
+  <ul>
+	  {{#each events}}
   <li>
-    {{text}}
+    {{this.name}}
   </li>
+  {{/each}}
+  </ul>
+</template>
+
+<template name="dashboard">
+    <li>{{attendee}}</li>
 </template>
 
 <template name="something"></template>
