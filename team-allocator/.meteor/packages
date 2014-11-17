@@ -7,6 +7,5 @@ meteor-platform
 autopublish
 insecure
 particle4dev:sass
-iron-router
 jquery
-
+iron:router

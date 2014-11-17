@@ -1,3 +1,17 @@
+Router.map( function () {
+  this.route('create');
+});
+Router.map( function () {
+  this.route('signup');
+});
+Router.map( function () {
+  this.route('events');
+});
+Router.map( function () {
+  this.route('dashboard');
+});
+
+
 Events = new Mongo.Collection("events");
 
 if (Meteor.isClient) {
@@ -29,7 +43,8 @@ if (Meteor.isClient) {
   Template.event.events({
 	  'click #create-event': function (event) {
 		  Events.insert({
-			  'name': $('#event-name').val()
+			  'name': $('#event-name').val(),
+			  'attendees': []
 		  });
 
 		  return false;
